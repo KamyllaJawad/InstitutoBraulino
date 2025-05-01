@@ -1,0 +1,12 @@
+{
+  "name": "instituto-braulino",
+  "version": "1.0.0",
+  "description": "Website institucional do Instituto Braulino",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+} 
