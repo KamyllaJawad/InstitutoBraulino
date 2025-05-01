@@ -588,6 +588,11 @@ body {
     .area-icon {
         margin-bottom: 0.5rem;
     }
+
+    .donation-card {
+        padding: 1rem 1.1rem;
+        margin-top: 1.5rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -916,4 +921,28 @@ body {
 
 .navbar.scrolled .main-logo-flip {
     transform: scaleX(-1) scale(0.95);
+}
+
+.donation-card {
+    background: rgba(201, 185, 184, 0.13);
+    border-radius: 12px;
+    padding: 1.2rem 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 8px rgba(174, 26, 110, 0.03);
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+.donation-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.donation-info div {
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+}
+
+.donation-info div:last-child {
+    margin-bottom: 0;
 }
