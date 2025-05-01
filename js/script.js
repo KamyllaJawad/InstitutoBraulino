@@ -47,18 +47,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
 
         // Update active nav item
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
+        let foundActive = false;
+        sections.forEach((section, idx) => {
+            const sectionTop = section.offsetTop - 120; // ajuste conforme altura da navbar
             const sectionHeight = section.offsetHeight;
             const sectionId = section.getAttribute('id');
-            
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            if (
+                (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) ||
+                (idx === sections.length - 1 && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2)
+            ) {
                 navLinks.forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${sectionId}`) {
                         link.classList.add('active');
                     }
                 });
+                foundActive = true;
             }
         });
     }
